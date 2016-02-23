@@ -22,5 +22,58 @@ h1
     background: -webkit-linear-gradient(bottom left, #fc80dd 0%, #853ee2 10%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    
+    padding-left: 20px;
 }
 
+nav
+{
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+nav ul
+{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    height: 150px;
+}
+
+nav li
+{
+    flex: 1;
+}
+
+nav a
+{
+    text-decoration: none;
+    color: white;
+    font-size: 0.8em;
+}
+
+nav a:hover
+{
+    text-decoration: underline;
+}
+
+h2
+{
+    color: white;
+    text-align: center;
+}
+
+#albums ul
+{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-around;
+}
+
+#albums li
+{
+    flex: 1;
+}
