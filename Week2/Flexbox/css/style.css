@@ -111,6 +111,28 @@ h2
         text-align: center;
     }
     
+    h2
+    {
+        text-transform: uppercase;
+        font-style: italic;
+        text-align: center;
+    }
+    
+    
+    #albums ul
+    {
+        display: flex;
+        flex-direction: row;
+        align-content: space-around;
+    }
+
+    
+    #albums ul img
+    {
+        display: block;
+        margin: 0 auto;
+    }
+    
 }
 
 @media screen and (min-width: 900px)
