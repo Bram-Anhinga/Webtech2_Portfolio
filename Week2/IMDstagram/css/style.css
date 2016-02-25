@@ -48,3 +48,27 @@ h2
     padding: 5px;
 }
 
+@media screen and (min-width: 900px)
+{   
+    nav ul li
+    {
+        flex: 1 1 0%;
+        text-align: center;
+        margin: 0 50px;
+    }
+    
+    
+    .typography, .ui
+    {
+        order: 1;
+    }
+    .logo
+    {
+        flex: 1 1 0%;
+        order: 2;
+    }
+    .branding, .graffiti
+    {
+        order: 3;
+    }
+}
