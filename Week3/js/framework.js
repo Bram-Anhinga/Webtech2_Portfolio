@@ -18,13 +18,46 @@ var WrapperElement = function(element)
     }
 }
 
+function hasClass(el, className){
+    
+    return el.element.className.indexOf(''+ className + '') > -1;
+}
+
 WrapperElement.prototype.toggleClass = function(className)
 {
     
+    if(this.isArray){
+                    
+        for( var i = 0; i<this.element.length; i++ ){
+                        
+            if(this.element[i].hasClass(this, className)){
+                
+                this.element[i].rmvClass(className);
+            }
+            else{
+                
+                this.element[i].addClass(className);
+                
+            }           
+        }
+    }
+    else{
+                    
+        if(hasClass(this, className)){
+                
+            this.rmvClass(className);
+        }
+        else{
+                
+            this.addClass(className);        
+        }
+    }
+                
+    return this;
 }
 
 WrapperElement.prototype.addClass = function(className)
-{
+{  
 	if(this.isArray)
 	{
         // multiple elements, we'll need to loop
@@ -38,6 +71,27 @@ WrapperElement.prototype.addClass = function(className)
         // just one element, so we can manipulate it without looping
 		this.element.className = className;
 	}
+    
+    // return the original WrapperElement, so that we can chain multiple functions like $("li").addClass("test").toggleClass("something");
+	return this;
+}
+
+WrapperElement.prototype.rmvClass = function(className)
+{
+    if(this.isArray)
+	{
+        // multiple elements, we'll need to loop
+		for(var i = 0; i<this.element.length; i++)
+		{
+			this.element[i].className = "prior-high";
+		}
+	}
+	else
+	{
+        // just one element, so we can manipulate it without looping
+		this.element.className = "prior-high";
+	}
+    
     // return the original WrapperElement, so that we can chain multiple functions like $("li").addClass("test").toggleClass("something");
 	return this;
 }
@@ -66,7 +120,19 @@ WrapperElement.prototype.keyup = function(action){
 
 WrapperElement.prototype.click = function(action)
 {
-
+    if(this.isArray){
+                    
+        for( var i = 0; i<this.element.length; i++ ){
+                        
+            this.element[i].addEventListener("click", action);                           
+        }
+    }
+    else{
+                    
+        this.element[0].addEventListener("click", action);
+    }
+                
+    return this;
 }
 
 WrapperElement.prototype.val = function(value)
