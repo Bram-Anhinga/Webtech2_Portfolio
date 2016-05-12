@@ -1,0 +1,65 @@
+body{
+    background-color: #F8F8F8;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#iPhone
+{
+    display: block;
+    height: 600px;
+    background-image: url(../images/iphone_6.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 39px;
+    padding-bottom: 40px;
+}
+
+#inner_iPhone
+{
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    height: 460px;
+    margin-top: 44px;
+    align-items: center;
+    align-content: space-around;
+    background-color: deepskyblue;
+    padding: 30px;
+}
+
+#city{
+    color: #FFFFFF;
+    margin: 10px 0;
+}
+
+#temperature{
+    width: 100%;
+    font-size: 5rem;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 10px auto;
+}
+
+#weather-summary{
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0px auto;
+}
+
+#canvas_wrapper{
+    margin: 20px auto;
+}
+
+#weather-icon{
+    width: 100%;
+    margin: 10px auto;
+
+}
