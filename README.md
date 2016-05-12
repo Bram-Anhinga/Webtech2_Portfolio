@@ -7,3 +7,9 @@ Practicing with GIT
 
 ## Lab 2
 Flexbox
+
+## Lab 3
+Advanced Javascript || ToDoApp
+
+## Lab 4
+API's || Wheater App
